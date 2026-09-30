@@ -1,2 +1,2 @@
-:HL["/grazzi-modas/_next/static/chunks/2_rhl76q4pac5.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"produto","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"saia-poas","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"2MsxD9EKRhqXrcrFq4KW4"}
+:HL["/grazzi-modas/_next/static/chunks/0skpk6o3id2lr.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"produto","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"saia-poas","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"E8s_wH345JbAmCpFCTdD6"}

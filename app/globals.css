@@ -94,7 +94,7 @@ html,body{max-width:100%;overflow-x:clip}
 .campaign-center img{object-position:center top}
 .store-story-image img{object-position:center top;transform:scale(1.015)}
 .zoom-dialog[data-slot="dialog-content"]{width:100vw!important;max-width:none!important;height:100dvh;max-height:none!important;padding:12px!important;border:0;border-radius:0;background:#151412;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.zoom-dialog img{width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 24px);object-fit:contain}
+.zoom-dialog img{width:100%;height:calc(100dvh - 24px);max-width:100%;max-height:calc(100dvh - 24px);object-fit:contain}
 .zoom-dialog [data-slot="dialog-close"]{top:18px;right:18px;z-index:2;padding:10px;background:#161513d9;color:#fff;opacity:1}
 .catalog-actions{display:flex;align-items:center;gap:24px}
 .filter-toggle{display:inline-flex;align-items:center;gap:9px;border:1px solid #161513;background:transparent;padding:12px 14px;text-transform:uppercase;letter-spacing:.08em;font-size:12px;white-space:nowrap;cursor:pointer}
