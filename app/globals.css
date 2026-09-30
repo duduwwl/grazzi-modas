@@ -146,6 +146,7 @@ html,body{max-width:100%;overflow-x:clip}
 /* Home page details */
 .wordmark{line-height:0;align-items:center}
 .wordmark .brand-logo{display:block;width:170px;height:64px;max-width:none;object-fit:cover;object-position:center;background:#000}
+.site-header .brand-logo{filter:grayscale(1) invert(1) contrast(2)}
 .footer .wordmark{border:0;padding:0}
 .campaign{background:#e5dfd5}
 .campaign-image::after{background:linear-gradient(0deg,rgba(0,0,0,.24),transparent 48%)}
