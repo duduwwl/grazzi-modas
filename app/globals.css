@@ -113,3 +113,32 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:900px){.catalog-tools{flex-wrap:wrap}.catalog-actions{width:100%;justify-content:space-between}.filter-panel{grid-template-columns:1fr 1fr}.filter-panel button{grid-column:1/-1;width:max-content}}
 @media(max-width:560px){.campaign{height:min(620px,calc(100svh - 68px))}.campaign-center img{object-position:center top}.filter-panel{grid-template-columns:1fr}.filter-panel button{grid-column:auto}.catalog-actions{gap:10px;align-items:stretch}.filter-toggle{flex:1;justify-content:center;white-space:normal;text-align:center}.sort-field{flex:1;white-space:normal}.sort-field select{max-width:100%}.zoom-dialog[data-slot="dialog-content"]{padding:8px!important}.zoom-dialog img{max-height:calc(100dvh - 16px)}}
 @media(prefers-reduced-motion:reduce){[data-reveal]{transition:none!important;transform:none!important;opacity:1!important}}
+
+/* Demonstration checkout */
+.checkout-page{background:#f6f4ee}
+.checkout-form fieldset{min-width:0}
+.checkout-form label small{font-size:11px;color:#77716a;letter-spacing:normal;text-transform:none}
+.delivery-address{padding-top:8px}
+.shipping-calculator{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.shipping-calculator button{border:1px solid #161513;background:#161513;color:#fff;padding:13px 17px;cursor:pointer;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.shipping-calculator button:hover{background:#8a623d;border-color:#8a623d}
+.shipping-calculator p{flex:1 1 230px;margin:0;color:#645d54;font-size:13px;line-height:1.5}
+.payment-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.payment-options label{display:flex;flex-direction:column;gap:9px;min-height:125px;border:1px solid #bdb7ad;padding:17px;cursor:pointer}
+.payment-options label.selected{border:2px solid #161513;padding:16px;background:#eeebe3}
+.payment-options label input{accent-color:#161513;margin:0 0 4px}
+.payment-options strong{font-size:16px}
+.payment-options small{line-height:1.4}
+.installments-field,.notes-field{display:flex;flex-direction:column;gap:10px;margin-top:24px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.installments-field select{height:48px;padding:0 13px;border:1px solid #bdb7ad;background:#faf9f5;font-size:15px;text-transform:none;letter-spacing:normal}
+.notes-field{margin-top:0}
+.notes-field textarea{min-height:105px;padding:13px;border:1px solid #bdb7ad;background:#faf9f5;resize:vertical;font:15px Arial,Helvetica,sans-serif;text-transform:none;letter-spacing:normal}
+.checkout-help{margin:18px 0 0;color:#645d54;font-size:13px;line-height:1.5}
+.checkout-summary .checkout-total{border-top:2px solid #9f9689!important;font-size:17px!important}
+.checkout-summary .primary-action{font:600 12px Arial,Helvetica,sans-serif}
+.checkout-success{max-width:720px;margin:65px auto 0;padding:45px;background:#ebe6dd}
+.checkout-success h2{font:400 clamp(42px,5vw,64px)/1 Georgia,serif;letter-spacing:-.055em;margin:16px 0 22px}
+.checkout-success>p:not(.eyebrow){font-size:16px;line-height:1.6;color:#625d56;margin-bottom:32px}
+.checkout-success>div{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #cac2b5;padding:15px 0;font-size:14px}
+.checkout-success .primary-action{margin-top:30px}
+@media(max-width:680px){.payment-options{grid-template-columns:1fr}.payment-options label{min-height:0}.checkout-success{padding:28px;margin-top:42px}}
