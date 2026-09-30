@@ -48,11 +48,11 @@ export function StoreFooter() {
     <div>
       <Link href="/" className="wordmark"><Wordmark/></Link>
       <p>Moda feminina em Lavras, Minas Gerais.</p>
+      <Link className="manager-link" href="/gerencia" aria-label="Área da gerência"><Settings2 size={16} aria-hidden="true"/><span>Gerência</span></Link>
     </div>
     <div>
       <strong>Visite a loja</strong>
       <p><a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Francisco+Salles+722+Lavras+MG" target="_blank" rel="noreferrer">Como chegar</a></p>
-      <Link className="manager-link" href="/gerencia" aria-label="Área da gerência"><Settings2 size={16} aria-hidden="true"/><span>Gerência</span></Link>
     </div>
     <div>
       <strong>Conecte-se</strong>

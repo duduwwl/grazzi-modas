@@ -160,15 +160,19 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:360px){.wordmark .brand-logo{width:126px;height:46px}}
 
 /* Editorial framing and manager entry */
-.category-links>a:first-child img{object-position:center 82%;transform:scale(1.48);transform-origin:center 78%}
-.category-links>a:nth-child(2) img{object-position:center 80%;transform:scale(1.46);transform-origin:center 76%}
-.category-links>a:first-child:hover img{transform:scale(1.54)}
-.category-links>a:nth-child(2):hover img{transform:scale(1.52)}
+.category-links>a:first-child img{object-position:center 86%;transform:scale(1.82);transform-origin:center 80%}
+.category-links>a:nth-child(2) img{object-position:center 84%;transform:scale(1.76);transform-origin:center 79%}
+.category-links>a:first-child:hover img{transform:scale(1.88)}
+.category-links>a:nth-child(2):hover img{transform:scale(1.82)}
 .store-story-copy{padding:60px clamp(32px,6vw,88px)}
 .store-story-copy h2{font-size:clamp(38px,4.15vw,58px);line-height:1.05;max-width:510px;margin:0 0 30px}
-.footer .manager-link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:#bdb5aa;border:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.footer .manager-link:hover{color:#fff}
-@media(max-width:560px){.category-links>a:first-child img,.category-links>a:nth-child(2) img{transform:scale(1.34)}.category-links>a:first-child:hover img,.category-links>a:nth-child(2):hover img{transform:scale(1.4)}.store-story-copy{padding:52px 22px 68px}.store-story-copy h2{font-size:clamp(37px,9vw,48px)}}
+.footer{background:#f5f3ed;color:#171514;border-top:1px solid #d4cdc2}
+.footer p{color:#4e4943}
+.footer a{border-color:#9c9388}
+.footer .wordmark .brand-logo{filter:grayscale(1) invert(1) contrast(2);mix-blend-mode:multiply}
+.footer .manager-link{display:inline-flex;align-items:center;gap:7px;margin-top:7px;color:#514a42;border:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.footer .manager-link:hover,.footer a:hover{color:#9a6739}
+@media(max-width:560px){.category-links>a:first-child img{transform:scale(1.66)}.category-links>a:nth-child(2) img{transform:scale(1.6)}.category-links>a:first-child:hover img{transform:scale(1.72)}.category-links>a:nth-child(2):hover img{transform:scale(1.66)}.store-story-copy{padding:52px 22px 68px}.store-story-copy h2{font-size:clamp(37px,9vw,48px)}}
 
 /* Local demonstration manager */
 .manager-page{max-width:1320px;margin:auto;padding:74px 5.2vw 120px}
