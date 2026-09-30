@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Search, ShoppingBag } from "lucide-react";
+import { Menu, Search, Settings2, ShoppingBag } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useBag } from "@/lib/bag";
 
@@ -51,8 +51,8 @@ export function StoreFooter() {
     </div>
     <div>
       <strong>Visite a loja</strong>
-      <p>Rua Doutor Francisco Salles, 722<br/>Lavras, Minas Gerais</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Francisco+Salles+722+Lavras+MG" target="_blank" rel="noreferrer">Como chegar</a>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Francisco+Salles+722+Lavras+MG" target="_blank" rel="noreferrer">Como chegar</a></p>
+      <Link className="manager-link" href="/gerencia" aria-label="Área da gerência"><Settings2 size={16} aria-hidden="true"/><span>Gerência</span></Link>
     </div>
     <div>
       <strong>Conecte-se</strong>

@@ -3,8 +3,9 @@
 import {useMemo, useState, type FormEvent} from "react";
 import Link from "next/link";
 import {StoreHeader, StoreFooter} from "@/components/store-chrome";
-import {formatBRL, getLook} from "@/lib/catalog";
+import {formatBRL, type Size} from "@/lib/catalog";
 import {useBag} from "@/lib/bag";
+import {addDemoOrder, useDemoLooks} from "@/lib/demo-management";
 
 type DeliveryMode = "retirada" | "entrega";
 type PaymentMethod = "pix" | "debito" | "credito";
@@ -28,6 +29,7 @@ const paymentLabels: Record<PaymentMethod, string> = {pix: "Pix", debito: "Cart�
 
 export default function Checkout() {
   const items = useBag();
+  const catalog = useDemoLooks();
   const [mode, setMode] = useState<DeliveryMode>("retirada");
   const [payment, setPayment] = useState<PaymentMethod>("pix");
   const [installments, setInstallments] = useState("1");
@@ -47,8 +49,9 @@ export default function Checkout() {
   const [feeMessage, setFeeMessage] = useState("");
   const [error, setError] = useState("");
   const [completed, setCompleted] = useState(false);
+  const [orderId, setOrderId] = useState("");
 
-  const selected = useMemo(() => items.map((item) => ({item, look: getLook(item.slug)})).filter((row) => row.look), [items]);
+  const selected = useMemo(() => items.map((item) => ({item, look: catalog.find((look) => look.slug === item.slug)})).filter((row) => row.look), [items, catalog]);
   const subtotal = selected.reduce((sum, {item, look}) => sum + (look?.demoPriceCents ?? 0) * item.quantity, 0);
   const total = mode === "retirada" ? subtotal : deliveryFee === null ? null : subtotal + deliveryFee;
 
@@ -79,6 +82,11 @@ export default function Checkout() {
       }
       if (deliveryFee === null) { setError("Calcule a taxa demonstrativa de entrega antes de continuar."); return; }
     }
+    const id = `${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+    if (!addDemoOrder({id, createdAt: new Date().toISOString(), customer: name.trim(), items: selected.map(({item, look}) => ({slug: item.slug, title: look!.title, size: item.size as Size, quantity: item.quantity})), fulfillment: mode, payment, totalCents: total ?? subtotal, status: "Novo"})) {
+      setError("Não foi possível guardar a simulação neste navegador."); return;
+    }
+    setOrderId(id);
     setCompleted(true);
     window.scrollTo({top: 0, behavior: "smooth"});
   };
@@ -86,10 +94,10 @@ export default function Checkout() {
   return <main><StoreHeader/><section className="checkout-page">
     <p className="eyebrow">Checkout demonstrativo</p>
     <h1>Seu próximo look,<br/><em>do seu jeito.</em></h1>
-    <p className="checkout-intro">Preencha os dados para simular a finalização. Preços, estoques e taxas são fictícios. Nenhum pedido é enviado à loja e nenhum pagamento é realizado.</p>
+    <p className="checkout-intro">Preencha os dados para simular a finalização. Preços, estoques e taxas são fictícios. A simulação fica apenas neste navegador, sem envio à loja ou pagamento.</p>
     {completed ? <div className="checkout-success" role="status">
       <p className="eyebrow">Simulação concluída</p><h2>Seu look está quase lá.</h2>
-      <p>Esta é apenas uma prévia. Sua seleção não foi enviada à Grazzi Modas e você não foi cobrada.</p>
+      <p>Simulação #{orderId} salva neste navegador para aparecer na área da gerência. Nada foi enviado à Grazzi Modas e você não foi cobrada.</p>
       <div><span>Recebimento</span><strong>{mode === "retirada" ? "Retirada na loja" : "Entrega"}</strong></div>
       <div><span>Pagamento escolhido</span><strong>{paymentLabels[payment]}{payment === "credito" ? ` · ${installments}x` : ""}</strong></div>
       <div><span>Total demonstrativo</span><strong>{formatBRL(total ?? subtotal)}</strong></div>
@@ -129,7 +137,7 @@ export default function Checkout() {
         <div><span>Subtotal demonstrativo</span><strong>{formatBRL(subtotal)}</strong></div>
         <div><span>{mode === "retirada" ? "Retirada" : "Taxa de entrega fictícia"}</span><strong>{mode === "retirada" ? "Grátis" : deliveryFee === null ? "Calcule acima" : formatBRL(deliveryFee)}</strong></div>
         <div className="checkout-total"><span>Total demonstrativo</span><strong>{total === null ? "A calcular" : formatBRL(total)}</strong></div>
-        <p>Não há cobrança nem envio de pedido nesta demonstração.</p>
+        <p>Não há cobrança nem envio à loja. A simulação é guardada somente neste navegador.</p>
         {error && <p className="form-error" role="alert">{error}</p>}
         <button className="primary-action" type="submit">Finalizar simulação</button>
         <Link className="secondary-action" href="/sacola">Voltar à sacola</Link>

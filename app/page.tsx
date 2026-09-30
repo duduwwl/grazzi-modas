@@ -33,7 +33,6 @@ export default function Home() {
       <section className="store-story" id="sobre">
         <div className="store-story-image" data-reveal><img loading="lazy" src="/grazzi-modas/looks/store-story-enhanced.png" alt="Composição fotografada na Grazzi Modas em Lavras" /></div>
         <div className="store-story-copy" data-reveal>
-          <p className="eyebrow">A Grazzi em Lavras</p>
           <h2>Mais de 20 anos vestindo mulheres com estilo.</h2>
           <p>Rua Doutor Francisco Salles, 722<br/>Lavras, Minas Gerais</p>
           <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Francisco+Salles+722+Lavras+MG" target="_blank" rel="noreferrer">Venha nos visitar</a>

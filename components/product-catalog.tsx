@@ -5,12 +5,13 @@ import {useSearchParams} from "next/navigation";
 import {Search,SlidersHorizontal} from "lucide-react";
 import {StoreHeader,StoreFooter} from "@/components/store-chrome";
 import {LookCard} from "@/components/look-card";
-import {looks} from "@/lib/catalog";
+import {useDemoLooks} from "@/lib/demo-management";
 
 const categories=["Todos","Calças","Saias","Looks"] as const;
 type PriceRange="todos"|"ate200"|"200a250"|"acima250";
 
 export default function Produtos(){
+  const looks=useDemoLooks();
   const searchParams=useSearchParams();
   const requestedCategory=searchParams.get("categoria");
   const [query,setQuery]=useState("");
@@ -32,7 +33,7 @@ export default function Produtos(){
     if(sort==="menor")rows.sort((a,b)=>a.demoPriceCents-b.demoPriceCents);
     if(sort==="maior")rows.sort((a,b)=>b.demoPriceCents-a.demoPriceCents);
     return rows;
-  },[query,category,priceRange,sort]);
+  },[looks,query,category,priceRange,sort]);
   const activeFilters=(category==="Todos"?0:1)+(priceRange==="todos"?0:1);
   const clearFilters=()=>{setQuery("");setCategory("Todos");setPriceRange("todos")};
   return <main>
