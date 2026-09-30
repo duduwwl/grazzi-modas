@@ -1,5 +1,5 @@
-:HL["/grazzi-modas/_next/static/chunks/0qe5uip_d0u1y.css","style"]
+:HL["/grazzi-modas/_next/static/chunks/3f41uwlf-_wy2.css","style"]
 :HL["/grazzi-modas/looks/look-preto.png","image"]
 :HL["/grazzi-modas/looks/saia-camadas.png","image"]
 :HL["/grazzi-modas/looks/jeans-azul.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"xeqf27cOm1TMIS5_clLbz"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"QVjYua4CDb03xMn-65oEd"}

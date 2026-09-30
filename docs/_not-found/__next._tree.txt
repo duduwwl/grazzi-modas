@@ -1,2 +1,2 @@
-:HL["/grazzi-modas/_next/static/chunks/0qe5uip_d0u1y.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"xeqf27cOm1TMIS5_clLbz"}
+:HL["/grazzi-modas/_next/static/chunks/3f41uwlf-_wy2.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"QVjYua4CDb03xMn-65oEd"}

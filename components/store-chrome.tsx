@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { useBag } from "@/lib/bag";
 
 function Wordmark() {
-  return <span className="wordmark-text">Grazzi<span>Modas</span></span>;
+  return <img className="brand-logo" src="/grazzi-modas/brand/grazzi-instagram.jpg" alt="Grazzi Modas · Moda Feminina" />;
 }
 
 export function StoreHeader() {
@@ -25,9 +25,6 @@ export function StoreHeader() {
             <Link onClick={() => setOpen(false)} className="wordmark" href="/"><Wordmark/></Link>
             <nav>
               <Link onClick={() => setOpen(false)} href="/produtos">Produtos</Link>
-              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Cal%C3%A7as">Calças</Link>
-              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Saias">Saias</Link>
-              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Looks">Looks</Link>
               <Link onClick={() => setOpen(false)} href="/#sobre">Nossa loja</Link>
             </nav>
           </SheetContent>
@@ -36,8 +33,6 @@ export function StoreHeader() {
       <Link href="/" className="wordmark" aria-label="Grazzi Modas, início"><Wordmark/></Link>
       <nav className="desktop-nav" aria-label="Navegação principal">
         <Link href="/produtos">Produtos</Link>
-        <Link href="/produtos?categoria=Cal%C3%A7as">Calças</Link>
-        <Link href="/produtos?categoria=Saias">Saias</Link>
         <Link href="/#sobre">Nossa loja</Link>
       </nav>
       <div className="header-actions">
