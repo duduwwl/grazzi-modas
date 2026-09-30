@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {WebMcpTools} from "@/components/webmcp-tools";
+import {ScrollReveal} from "@/components/scroll-reveal";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://duduwwl.github.io/grazzi-modas/"),
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="antialiased"><WebMcpTools/>{children}</body>
+      <body className="antialiased"><WebMcpTools/><ScrollReveal/>{children}</body>
     </html>
   );
 }

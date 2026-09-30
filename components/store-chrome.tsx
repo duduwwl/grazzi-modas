@@ -16,7 +16,6 @@ export function StoreHeader() {
   const count = items.reduce((n, item) => n + item.quantity, 0);
 
   return <>
-    <div className="announcement">Demonstração: preços e estoques fictícios <span>·</span> Confirme valores com a loja</div>
     <header className="site-header">
       <div className="mobile-menu">
         <Sheet open={open} onOpenChange={setOpen}>
@@ -50,7 +49,7 @@ export function StoreHeader() {
 }
 
 export function StoreFooter() {
-  return <footer className="footer">
+  return <footer className="footer" data-reveal>
     <div>
       <Link href="/" className="wordmark"><Wordmark/></Link>
       <p>Moda feminina em Lavras, Minas Gerais.</p>
