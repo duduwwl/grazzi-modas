@@ -1,0 +1,70 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, Search, ShoppingBag } from "lucide-react";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { useBag } from "@/lib/bag";
+
+function Wordmark() {
+  return <span className="wordmark-text">Grazzi<span>Modas</span></span>;
+}
+
+export function StoreHeader() {
+  const items = useBag();
+  const [open, setOpen] = useState(false);
+  const count = items.reduce((n, item) => n + item.quantity, 0);
+
+  return <>
+    <div className="announcement">Demonstração: preços e estoques fictícios <span>·</span> Confirme valores com a loja</div>
+    <header className="site-header">
+      <div className="mobile-menu">
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger aria-label="Abrir menu"><Menu size={24}/></SheetTrigger>
+          <SheetContent side="left" className="store-menu">
+            <SheetTitle className="sr-only">Navegação</SheetTitle>
+            <Link onClick={() => setOpen(false)} className="wordmark" href="/"><Wordmark/></Link>
+            <nav>
+              <Link onClick={() => setOpen(false)} href="/produtos">Produtos</Link>
+              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Cal%C3%A7as">Calças</Link>
+              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Saias">Saias</Link>
+              <Link onClick={() => setOpen(false)} href="/produtos?categoria=Looks">Looks</Link>
+              <Link onClick={() => setOpen(false)} href="/#sobre">Nossa loja</Link>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+      <Link href="/" className="wordmark" aria-label="Grazzi Modas, início"><Wordmark/></Link>
+      <nav className="desktop-nav" aria-label="Navegação principal">
+        <Link href="/produtos">Produtos</Link>
+        <Link href="/produtos?categoria=Cal%C3%A7as">Calças</Link>
+        <Link href="/produtos?categoria=Saias">Saias</Link>
+        <Link href="/#sobre">Nossa loja</Link>
+      </nav>
+      <div className="header-actions">
+        <Link href="/produtos" aria-label="Buscar produtos"><Search size={20}/></Link>
+        <Link href="/sacola" aria-label={`Sacola com ${count} ${count === 1 ? "look" : "looks"}`}><ShoppingBag size={20}/>{count > 0 && <span className="bag-count">{count}</span>}</Link>
+      </div>
+    </header>
+  </>;
+}
+
+export function StoreFooter() {
+  return <footer className="footer">
+    <div>
+      <Link href="/" className="wordmark"><Wordmark/></Link>
+      <p>Moda feminina em Lavras, Minas Gerais.</p>
+    </div>
+    <div>
+      <strong>Visite a loja</strong>
+      <p>Rua Doutor Francisco Salles, 722<br/>Lavras, Minas Gerais</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Francisco+Salles+722+Lavras+MG" target="_blank" rel="noreferrer">Como chegar</a>
+    </div>
+    <div>
+      <strong>Conecte-se</strong>
+      <p><a href="https://www.instagram.com/grazzimodas/" target="_blank" rel="noreferrer">Instagram</a></p>
+      <p><a href="https://wa.me/553538219394" target="_blank" rel="noreferrer">WhatsApp</a></p>
+      <a href="tel:+553538219394">(35) 3821-9394</a>
+    </div>
+  </footer>;
+}

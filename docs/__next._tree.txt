@@ -1,0 +1,5 @@
+:HL["/grazzi-modas/_next/static/chunks/3ml91odyu4yrd.css","style"]
+:HL["/grazzi-modas/looks/look-preto.png","image"]
+:HL["/grazzi-modas/looks/saia-camadas.png","image"]
+:HL["/grazzi-modas/looks/jeans-azul.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"iVSy6Zsd1Mbw5KYzGjuvK"}
