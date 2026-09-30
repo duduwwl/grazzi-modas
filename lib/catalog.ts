@@ -9,6 +9,10 @@ export type Look = {
   demoStock: number;
 };
 
+export const sizes = ["P", "M", "G", "GG"] as const;
+export type Size = (typeof sizes)[number];
+export const isSize = (value: unknown): value is Size => sizes.some((size) => size === value);
+
 // Valores e quantidades fictícios, apenas para demonstrar a experiência da loja.
 // Substituir pelo cadastro real antes de habilitar pedidos ou pagamentos.
 export const looks: Look[] = [
