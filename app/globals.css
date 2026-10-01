@@ -217,3 +217,24 @@ html,body{max-width:100%;overflow-x:clip}
 .manager-new-form .primary-action{width:max-content;border:0;cursor:pointer}.manager-new-form>p{font-size:13px;color:#53724b}
 @media(max-width:900px){.manager-product{grid-template-columns:60px 1fr 1fr;gap:13px}.manager-product>img{grid-row:span 2;width:60px;height:80px}.manager-product-name{grid-column:span 2}.manager-product-actions{align-self:end}.manager-orders{grid-template-columns:1fr}}
 @media(max-width:600px){.manager-page{padding:52px 18px 80px}.manager-heading{align-items:start;flex-direction:column}.manager-heading h1{font-size:48px}.manager-tabs{flex-wrap:wrap;overflow:visible}.manager-tabs button{padding:14px 12px}.manager-product{grid-template-columns:56px 1fr 1fr}.manager-product>img{width:56px;height:72px}.manager-product-name{grid-column:span 2}.manager-product-actions{grid-column:2/-1;flex-direction:row;align-items:center;flex-wrap:wrap}.manager-new-form{grid-template-columns:1fr}.manager-image-preview{grid-row:auto;max-height:230px}.manager-new-form .manager-note{grid-column:auto}}
+
+/* Responsive controls and product reading space */
+@media(max-width:800px){
+  .site-header{grid-template-columns:44px minmax(0,1fr) 44px}
+  .mobile-menu button,.header-actions a{display:grid;place-items:center;min-width:44px;min-height:44px}
+}
+@media(max-width:480px){
+  .catalog-tools{gap:20px}
+  .catalog-actions{display:grid;grid-template-columns:1fr;width:100%;gap:12px}
+  .filter-toggle{width:100%;min-height:46px}
+  .sort-field{width:100%;min-width:0;justify-content:space-between}
+  .sort-field select{width:min(190px,65%);min-width:0;height:44px}
+  .catalog-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible}
+  .catalog-categories button{min-height:44px;white-space:normal}
+  .filter-panel select,.sort-field select,.manager-order select,.manager-product input,.manager-new-form input,.manager-new-form select,.manager-new-form textarea{font-size:16px}
+}
+@media(max-width:360px){
+  .catalog-grid,.related .product-grid{grid-template-columns:1fr}
+  .catalog-grid .product-image,.related .product-image{height:auto;aspect-ratio:4/5}
+  .checkout-page h1{font-size:clamp(42px,12vw,52px)}
+}
