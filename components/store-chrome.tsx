@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Search, Settings2, ShoppingBag } from "lucide-react";
+import { Menu, Search, ShoppingBag } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useBag } from "@/lib/bag";
 
@@ -48,7 +48,7 @@ export function StoreFooter() {
     <div>
       <Link href="/" className="wordmark"><Wordmark/></Link>
       <p>Moda feminina em Lavras, Minas Gerais.</p>
-      <Link className="manager-link" href="/gerencia" aria-label="Área da gerência"><Settings2 size={16} aria-hidden="true"/><span>Gerência</span></Link>
+      <Link className="manager-link" href="/gerencia" aria-label="Área da gerência">Gerência</Link>
     </div>
     <div>
       <strong>Visite a loja</strong>
