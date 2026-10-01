@@ -1,7 +1,7 @@
 "use client";
 
 import {useEffect, useState} from "react";
-import {looks, type Look, type Size} from "@/lib/catalog";
+import {looks, productCategories, type Look, type Size} from "@/lib/catalog";
 
 const PRODUCTS_KEY = "grazzi-demo-catalog-v1";
 const ORDERS_KEY = "grazzi-demo-orders-v1";
@@ -31,7 +31,7 @@ const cleanLook = (raw: unknown): Look | null => {
   const row = raw as Partial<Look>;
   if (typeof row.slug !== "string" || !/^[a-z0-9-]{1,80}$/.test(row.slug) ||
       typeof row.title !== "string" || !row.title.trim() || row.title.length > 100 ||
-      !["Calças", "Saias", "Looks"].includes(row.category || "") ||
+      !productCategories.includes(row.category as Look["category"]) ||
       !validImage(row.image) || typeof row.note !== "string" || row.note.length > 300 ||
       !Number.isInteger(row.demoPriceCents) || (row.demoPriceCents ?? 0) < 0 || (row.demoPriceCents ?? 0) > 10000000 ||
       !Number.isInteger(row.demoStock) || (row.demoStock ?? 0) < 0 || (row.demoStock ?? 0) > 100000) return null;

@@ -3,10 +3,10 @@
 import {useState, type FormEvent} from "react";
 import Link from "next/link";
 import {StoreHeader, StoreFooter} from "@/components/store-chrome";
-import {formatBRL, looks, type Look} from "@/lib/catalog";
+import {formatBRL, looks, productCategories, type Look} from "@/lib/catalog";
 import {removeDemoLook, saveDemoLook, updateDemoOrderStatus, useDemoLooks, useDemoOrders, type DemoOrder} from "@/lib/demo-management";
 
-const categories: Look["category"][] = ["Calças", "Saias", "Looks"];
+const categories: Look["category"][] = [...productCategories];
 const sampleImages = looks.map((look) => ({image: look.image, label: look.title}));
 const toPriceInput = (cents: number) => (cents / 100).toFixed(2).replace(".", ",");
 const fromPriceInput = (value: string) => {
