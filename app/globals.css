@@ -222,6 +222,8 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:800px){
   .site-header{grid-template-columns:44px minmax(0,1fr) 44px}
   .mobile-menu button,.header-actions a{display:grid;place-items:center;min-width:44px;min-height:44px}
+  .store-menu .brand-logo{filter:grayscale(1) invert(1) contrast(2)}
+  .store-menu>button{display:grid;place-items:center;width:44px;height:44px;top:8px;right:8px}
 }
 @media(max-width:480px){
   .catalog-tools{gap:20px}
