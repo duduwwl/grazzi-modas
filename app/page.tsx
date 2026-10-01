@@ -12,7 +12,7 @@ export default function Home() {
         <div className="campaign-image campaign-right"><img src="/grazzi-modas/looks/jeans-azul.png" alt="Look com jeans azul fotografado na loja Grazzi Modas" /></div>
         <div className="campaign-copy" data-reveal>
           <p>Grazzi Modas · Lavras</p>
-          <h1>Vista o seu<br/><em>próximo momento.</em></h1>
+          <h1>Vista o seu</h1>
           <Link href="/produtos">Descubra os looks <span aria-hidden="true">→</span></Link>
         </div>
         <span className="campaign-side">MODA FEMININA / LAVRAS</span>
