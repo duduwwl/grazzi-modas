@@ -240,3 +240,17 @@ html,body{max-width:100%;overflow-x:clip}
   .catalog-grid .product-image,.related .product-image{height:auto;aspect-ratio:4/5}
   .checkout-page h1{font-size:clamp(42px,12vw,52px)}
 }
+
+/* Keep product cards readable and checkout fields clear on medium screens. */
+.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.form-grid label,.checkout-form,.bag-summary{min-width:0}
+@media(min-width:801px) and (max-width:1100px){
+  .catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .catalog-grid .product-image{height:clamp(330px,43vw,440px)}
+}
+@media(max-width:1100px){
+  .bag-layout,.checkout-layout{grid-template-columns:minmax(0,1fr);gap:36px}
+  .bag-summary{max-width:720px}
+}
+@media(max-width:800px){.bag-summary{max-width:none}}
+@media(max-width:480px){.form-grid{grid-template-columns:minmax(0,1fr)}}
