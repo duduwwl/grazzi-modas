@@ -3,4 +3,4 @@
 :HL["/grazzi-modas/looks/look-preto.png","image"]
 :HL["/grazzi-modas/looks/saia-camadas.png","image"]
 :HL["/grazzi-modas/looks/jeans-azul.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"x370PEjuq_MX9Zv3i_Ka0"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"xcvH67LJKu2Gnk0FXvnwC"}

@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { useBag } from "@/lib/bag";
 
 function Wordmark() {
-  return <img className="brand-logo" src="/grazzi-modas/brand/grazzi-black-transparent.svg" alt="Grazzi Modas · Moda Feminina" />;
+  return <img className="brand-logo" src="/grazzi-modas/brand/grazzi-logo-hd.svg" alt="Grazzi Modas · Moda Feminina" />;
 }
 
 export function StoreHeader() {
