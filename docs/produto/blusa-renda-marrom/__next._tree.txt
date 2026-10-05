@@ -1,3 +1,3 @@
-:HL["/grazzi-modas/_next/static/chunks/0ytsh7nbxm_9b.css","style"]
+:HL["/grazzi-modas/_next/static/chunks/0a6ywds9br62k.css","style"]
 :HL["/grazzi-modas/scroll-reveal.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"produto","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"blusa-renda-marrom","siblings":["novo"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"0QO6c0ePpYkhTWpb055J6"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"produto","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"blusa-renda-marrom","siblings":["novo"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"sCyh1z4B08Ohd1rJ50hv5"}
