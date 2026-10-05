@@ -254,3 +254,10 @@ html,body{max-width:100%;overflow-x:clip}
 }
 @media(max-width:800px){.bag-summary{max-width:none}}
 @media(max-width:480px){.form-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Show the complete product photographs, including faces and full outfits. */
+.catalog-grid .product-image img,
+.related .product-image img,
+.detail-image img{object-fit:contain}
+.catalog-grid .product-tile:hover img,
+.related .product-tile:hover img{transform:none}
