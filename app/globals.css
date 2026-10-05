@@ -145,7 +145,7 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Home page details */
 .wordmark{line-height:0;align-items:center}
-.wordmark .brand-logo{display:block;width:170px;height:64px;max-width:none;object-fit:cover;object-position:center;background:transparent;filter:grayscale(1) invert(1) contrast(2);mix-blend-mode:multiply}
+.wordmark .brand-logo{display:block;width:170px;height:64px;max-width:none;object-fit:contain;background:transparent}
 .footer .wordmark{border:0;padding:0}
 .campaign{background:#e5dfd5}
 .campaign-image::after{background:linear-gradient(0deg,rgba(0,0,0,.24),transparent 48%)}
@@ -168,7 +168,6 @@ html,body{max-width:100%;overflow-x:clip}
 .footer{background:#f5f3ed;color:#171514;border-top:1px solid #d4cdc2}
 .footer p{color:#4e4943}
 .footer a{border-color:#9c9388}
-.footer .wordmark .brand-logo{mix-blend-mode:multiply}
 .footer .manager-link{display:inline-flex;align-items:center;gap:7px;margin-top:7px;color:#514a42;border:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .footer .manager-link:hover,.footer a:hover{color:#9a6739}
 @media(max-width:560px){.category-links>a:first-child img{transform:scale(1.66)}.category-links>a:nth-child(2) img{transform:scale(1.6)}.category-links>a:first-child:hover img{transform:scale(1.72)}.category-links>a:nth-child(2):hover img{transform:scale(1.66)}.store-story-copy{padding:52px 22px 68px}.store-story-copy h2{font-size:clamp(37px,9vw,48px)}}
@@ -221,7 +220,6 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:800px){
   .site-header{grid-template-columns:44px minmax(0,1fr) 44px}
   .mobile-menu button,.header-actions a{display:grid;place-items:center;min-width:44px;min-height:44px}
-  .store-menu .brand-logo{filter:grayscale(1) invert(1) contrast(2)}
   .store-menu>button{display:grid;place-items:center;width:44px;height:44px;top:8px;right:8px}
 }
 @media(max-width:480px){
